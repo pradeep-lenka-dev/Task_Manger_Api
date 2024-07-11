@@ -25,5 +25,18 @@ const loadData = (callback) => {
     });
 };
 
+const getTaskById = (id,callback) =>{
+    loadData((err,data)=>{
+        if(err){
 
-module.exports = {saveData,loadData}
+        }
+        const task = data.find(task => task.id == id)
+    callback(null, task)
+    })
+    const data = fs.readFileSync(filePath, 'utf8');
+       
+    console.log("🚀 ~ uniqueTask ~ data:", JSON.parse(data))
+}
+
+
+module.exports = {saveData,loadData,getTaskById}

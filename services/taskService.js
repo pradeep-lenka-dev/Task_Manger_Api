@@ -4,6 +4,10 @@ const loadTask = (callback) =>{
     dataStore.loadData(callback)
 }
 
+const getTaskById = (id,callback) =>{
+    dataStore.getTaskById(id,callback)
+}
+
 const saveTask = (data,callback)=>{
     dataStore.saveData(data,callback)
 }
@@ -32,7 +36,7 @@ const addTask = (task, callback) =>{
             return callback(err)
         }
         data.push(task);
-        saveTask(task,callback);
+        saveTask(data,callback);
     });
 
 };
@@ -41,5 +45,6 @@ module.exports = {
     validateTask,
     addTask,
     loadTask,
-    saveTask
+    saveTask,
+    getTaskById
 }

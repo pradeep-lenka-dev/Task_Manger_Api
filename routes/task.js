@@ -14,8 +14,8 @@ router.get('/tasks',(req,res)=>{
         if(err){
             return res.status(500).send("Internal Error")
         }
-        res.send(data)
-    })
+            res.send(data)
+        })
 })
 
 
@@ -36,4 +36,14 @@ router.post('/tasks',function(req,res){
     })
 
 })
+
+router.get('/tasks/:id',(req,res)=>{
+    let Id = req.params.id
+    taskService.getTaskById(Id ,(err,data)=>{
+        res.send(data)
+    })
+
+})
+
+
 module.exports =  router
