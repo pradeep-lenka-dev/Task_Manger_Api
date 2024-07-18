@@ -41,10 +41,16 @@ const addTask = (task, callback) =>{
 
 };
 
+const updateTask = (id,updatedTask,callback) =>{
+   const d= dataStore.updateTask(id,updatedTask,callback)
+   console.log("🚀 ~ updateTask ~ d:", d)
+}
+
 module.exports = {
     validateTask,
     addTask,
     loadTask,
     saveTask,
-    getTaskById
+    getTaskById,
+    updateTask
 }

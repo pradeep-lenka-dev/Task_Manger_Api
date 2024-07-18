@@ -1,12 +1,12 @@
 const fs = require('fs');
-const path =  require ('path');
+const path = require('path');
 
 
 const filePath = path.join(__dirname, 'apiData.json');
 
 const saveData = (data, callback) => {
-    fs.writeFile(filePath, JSON.stringify(data,null,2), 'utf8',(err)=>{
-        if(err){
+    fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8', (err) => {
+        if (err) {
             return callback(err);
         }
         return callback(null)
@@ -14,29 +14,57 @@ const saveData = (data, callback) => {
 }
 
 const loadData = (callback) => {
-    fs.readFile(filePath, 'utf8',(err,data)=>{
-        if(err){
-            if(err.code === 'ENOENT'){
-                return callback(null,[])
+    fs.readFile(filePath, 'utf8', (err, data) => {
+        if (err) {
+            if (err.code === 'ENOENT') {
+                return callback(null, [])
             }
-            return callback (err);
+            return callback(err);
         }
         callback(null, JSON.parse(data));
     });
 };
 
-const getTaskById = (id,callback) =>{
-    loadData((err,data)=>{
-        if(err){
+const getTaskById = (id, callback) => {
+    loadData((err, data) => {
+        if (err) {
 
         }
-        const task = data.find(task => task.id == id)
-    callback(null, task)
+        const taskIndex = data.findIndex(task => task.id == id)
+        if (taskIndex == -1) {
+            callback(null, "Task not Found")
+        }
+        callback(null, data[taskIndex])
     })
-    const data = fs.readFileSync(filePath, 'utf8');
-       
-    console.log("🚀 ~ uniqueTask ~ data:", JSON.parse(data))
+}
+
+const updateTask = (id, updatedTask, callback) => {
+    const { title, description, completed, priority } = updatedTask;
+
+    loadData((err, data) => {
+        if (err) {
+
+        }
+        const taskIndex = data.findIndex(task => task.id == id)
+        if (taskIndex == -1) {
+            // callback(null, "Task not Found")
+        }
+        data.title = title;
+        data.description = description;
+        data.completed = completed;
+        //data.priority = priority;
+        fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8', (err) => {
+            if (err) {
+                return callback(err);
+            }
+            return callback(null)
+        })
+
+        console.log("🚀 ~ loadData ~ data:", data)
+        callback(null, data)
+    })
+
 }
 
 
-module.exports = {saveData,loadData,getTaskById}
+module.exports = { saveData, loadData, getTaskById, updateTask }

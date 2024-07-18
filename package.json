@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./app.js"
+    "start": "node ./app.js",
+    "test": "tap test/*.js --disable-coverage"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
