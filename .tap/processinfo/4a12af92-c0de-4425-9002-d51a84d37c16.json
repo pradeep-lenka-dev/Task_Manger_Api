@@ -1,0 +1,241 @@
+{
+  "date": "2024-07-20T14:41:19.003Z",
+  "argv": [
+    "/usr/bin/node",
+    "/home/hp/Projects/Task_Manger_Api/test/server.test.js"
+  ],
+  "execArgv": [
+    "--import=file:///home/hp/Projects/Task_Manger_Api/node_modules/@isaacs/ts-node-temp-fork-for-pr-2009/import.mjs",
+    "--import=file:///home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/import.mjs",
+    "--enable-source-maps",
+    "--import=file:///home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/processinfo/dist/esm/import.mjs"
+  ],
+  "NODE_OPTIONS": "\"--import=file:///home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/processinfo/dist/esm/import.mjs\"",
+  "cwd": "/home/hp/Projects/Task_Manger_Api",
+  "pid": 81325,
+  "ppid": 81297,
+  "parent": null,
+  "uuid": "4a12af92-c0de-4425-9002-d51a84d37c16",
+  "files": [
+    "/home/hp/Projects/Task_Manger_Api/test/server.test.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/dist/mjs/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-json.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/find-star-match.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/glob.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/has-magic.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/ignore.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/brace-expansion/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/assert-valid-pattern.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/ast.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/escape.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/unescape.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/pattern.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/walker.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minipass/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/processor.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/brace-expressions.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/loader.mjs",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/hooks.mjs",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/mock-service-client.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/mock-service.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/is-relative-require.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/export-line.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/munge-mocks.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/resolve-mock-entry-point.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/service-key.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/commonjs/service-key.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/call-site-like.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/require-resolve.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-all-conditional-values.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-all-conditions.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-unique-condition-sets.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-all-exports.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-all-local-imports.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-conditional-value.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-import.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/is-windows.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/parse.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-conditional-values-list.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/errors.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-named-exports-list.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-pkg.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-export.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/star-glob.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/to-path.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/file-exists.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/find-dep-package.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/to-file-url.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-dependency-export.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-package-import.js",
+    "/home/hp/Projects/Task_Manger_Api/app.js",
+    "/home/hp/Projects/Task_Manger_Api/routes/taskRoute.js",
+    "/home/hp/Projects/Task_Manger_Api/controller/taskController.js",
+    "/home/hp/Projects/Task_Manger_Api/services/taskService.js"
+  ],
+  "sources": {
+    "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/dist/mjs/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-json.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/read-json.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/find-star-match.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/find-star-match.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/glob.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/glob.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/has-magic.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/has-magic.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/ignore.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/ignore.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/assert-valid-pattern.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/assert-valid-pattern.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/ast.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/ast.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/escape.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/escape.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/unescape.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/unescape.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/pattern.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/pattern.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/walker.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/walker.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minipass/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/minipass/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/processor.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/processor.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/brace-expressions.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/brace-expressions.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/mock-service.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/src/mock-service.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/is-relative-require.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/is-relative-require.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/export-line.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/src/export-line.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/munge-mocks.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/src/munge-mocks.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/resolve-mock-entry-point.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/src/resolve-mock-entry-point.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/service-key.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/src/service-key.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/commonjs/service-key.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/src/service-key-cjs.cts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/call-site-like.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/src/call-site-like.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/require-resolve.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/src/require-resolve.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-all-conditional-values.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/get-all-conditional-values.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-all-conditions.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/get-all-conditions.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-unique-condition-sets.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/get-unique-condition-sets.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-all-exports.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-all-exports.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-all-local-imports.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-all-local-imports.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-conditional-value.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-conditional-value.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-import.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-import.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/is-windows.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/is-windows.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/dist/esm/parse.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/stack/src/parse.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-conditional-values-list.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/get-conditional-values-list.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/errors.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/errors.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/get-named-exports-list.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/get-named-exports-list.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-pkg.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/read-pkg.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-export.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-export.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/star-glob.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/star-glob.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/to-path.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/to-path.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/file-exists.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/file-exists.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/find-dep-package.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/find-dep-package.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/to-file-url.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/to-file-url.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-dependency-export.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-dependency-export.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/resolve-package-import.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-package-import.ts"
+    ]
+  },
+  "root": "4a12af92-c0de-4425-9002-d51a84d37c16",
+  "externalID": "test/server.test.js",
+  "code": 0,
+  "signal": null,
+  "runtime": 1538.260981
+}

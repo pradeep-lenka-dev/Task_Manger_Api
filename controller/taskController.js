@@ -2,92 +2,87 @@ const taskService = require('../services/taskService');
 
 const taskController = {
 
-    loadTask: async (callback) => {
-        taskService.loadData(callback)
-    },
+    addTask: async (req, res) => {
+        const taskData = req.body;
 
+        // Validate the incoming task data
+        const validationError = taskService.validateTask(taskData);
+        if (validationError) {
+            return res.status(400).json({ error: validationError });
+        }
 
-
-    saveTask: (req, res) => {
-        const task = req.body
         try {
-
-            const result = taskService.saveData(data, callback)
-            res.status(2000).json({ message: "task added successfully", task: result })
+            // Add the task using the service
+            const newTask = await taskService.addTask(taskData);
+            res.status(201).json({ message: 'Task added successfully', task: newTask });
         } catch (error) {
-
+            console.error('Error adding task:', error);
+            res.status(500).json({ error: 'An error occurred while adding the task. Please try again later.' });
         }
     },
 
-    validateTask: async (task) => {
-        const { title, description, completed } = task;
-
-        if (!title || typeof title !== 'string' || title.trim() === '') {
-            return "title is required !"
+    getTask : async (req, res) => {
+        try {
+            const tasks = await taskService.loadData();
+            res.status(200).json({ message: 'Tasks fetched successfully', tasks });
+        } catch (error) {
+            console.error('Error fetching tasks:', error);
+            res.status(500).json({ error: 'An error occurred while fetching tasks. Please try again later.' });
         }
-
-        if (!description || typeof description !== 'string' || description.trim() === '') {
-            return "Description is required !"
-        }
-
-        if (typeof completed !== 'boolean') {
-            return "completed status must be true o false"
-        }
-
-        return null;
     },
 
-    addTask: (task, callback) => {
-        loadTask((err, data) => {
-            if (err) {
-                return callback(err)
+    getTaskById : async (req, res) => {
+        const id = req.params.id;
+        try {
+            const result = await taskService.getTaskById(id);
+            if (!result) {
+                return res.status(404).json({ message: 'Task not found' });
             }
-            data.push(task);
-            saveTask(data, callback);
-        });
-
-    },
-
-    getTaskById:  (req, res) => {
-        const id = req.params.id;
-        try {
-            const result =  taskService.getTaskById(id)
-            console.log("🚀 ~ result:", result)
-            return res.status(200).json({message:"",task:result})
+            return res.status(200).json({ message: 'Task retrieved successfully', task: result });
         } catch (error) {
-
+            console.error('Error retrieving task:', error);
+            return res.status(500).json({ error: 'An error occurred while retrieving the task. Please try again later.' });
         }
     },
 
-    updateTask: (req, res) => {
+    updateTask : async (req, res) => {
         const id = req.params.id;
-        const updatedTask = req.body
+        const updatedTask = req.body;
+    
+        // Validate ID format
         if (isNaN(id)) {
-            return res.status(400).json({ error: "Invalid task id" });
+            return res.status(400).json({ error: 'Invalid task id' });
         }
+    
         try {
-            const result = taskService.updateTask(id, updatedTask)
-
-            return res.status(200).json({ message: "Task Update successfully", task: result })
-
-        } catch (error) {
-
-        }
-    },
-
-    deleteTask: (req, res) => {
-        const id = req.params.id;
-        if (isNaN(id)) {
-            return res.status(400).json({ status: 400, error: "Invalid task id" });
-        }
-        try {
-            const result = taskService.deleteTask(id);
-            if (result == -1) {
-                return res.status(404).json({ error: "Task not found" })
+            const result = await taskService.updateTask(id, updatedTask);
+            if (!result) {
+                return res.status(404).json({ message: 'Task not found' });
             }
-            return res.status(200).json({ message: "Task deleted successfully", task: result });
+            return res.status(200).json({ message: 'Task updated successfully', task: result });
         } catch (error) {
+            console.error('Error updating task:', error);
+            return res.status(500).json({ error: 'An error occurred while updating the task. Please try again later.' });
+        }
+    },
 
+    deleteTask : async (req, res) => {
+        const id = req.params.id;
+    
+        // Validate ID format
+        if (isNaN(id)) {
+            return res.status(400).json({ status: 400, error: 'Invalid task id' });
+        }
+    
+        try {
+            const result = await taskService.deleteTask(id);
+            if (result === -1) {
+                return res.status(404).json({ error: 'Task not found' });
+            }
+            return res.status(200).json({ message: 'Task deleted successfully' });
+        } catch (error) {
+            console.error('Error deleting task:', error);
+            return res.status(500).json({ error: 'An error occurred while deleting the task. Please try again later.' });
         }
     }
 }
