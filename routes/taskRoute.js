@@ -3,11 +3,6 @@ var router = express.Router();
 var taskData = require('../apiData')
 const taskController = require("../controller/taskController")
 
-router.get('/', function (req, res, next) {
-    res.send('respponse with resorce')
-});
-
-
 
 router.get('/tasks', (req, res) => {
     dataStore.loadData((err, data) => {
@@ -37,39 +32,20 @@ router.post('/tasks', function (req, res) {
 
 })
 
-router.get('/tasks/:id', (req, res) => {
-    let Id = req.params.id
-    taskController.getTaskById(Id, (err, data) => {
-        res.send(data)
-    })
 
-})
 
-router.put('/tasks/:id', (req, res) => {
-    let Id = req.params.id;
-    const { title, description, completed, priority } = req.body;
-    let updatedTask = req.body
+// router.put('/tasks/:id',taskController.updateTask)
 
-      if (isNaN(Id)) {
-        return res.status(400).json({ error: "Invalid task id" });
-      }
+// router.delete('/tasks/:id',taskController.deleteTask)
 
-      const validationError = taskController.validateTask(updatedTask)
-      if (validationError) {
-          return res.status(400).send(validationError)
-      }
+router.route('/tasks')
+        // .get(taskController.loadData)
+        .post(taskController.addTask)
 
-      
-    taskController.updateTask(Id, updatedTask,(err,data)=>{
-
-       return res.send(data)
-    })
-})
-
-   
-  
-  
-  
-
+router.route('/tasks/:id')
+        .get(taskController.getTaskById)
+        .put(taskController.updateTask)
+        .delete(taskController.deleteTask)
+                        
 
 module.exports = router

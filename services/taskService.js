@@ -4,41 +4,49 @@ const path = require('path');
 
 const filePath = path.join(__dirname, 'apiData.json');
 
-const saveData = (data, callback) => {
+const saveData = (data) => {
     fs.writeFile(filePath, JSON.stringify(data, null, 2), 'utf8', (err) => {
         if (err) {
-            return callback(err);
+            return err;
         }
-        return callback(null)
+        return (data)
     })
 }
 
-const loadData = (callback) => {
+const loadData = () => {
     fs.readFile(filePath, 'utf8', (err, data) => {
         if (err) {
             if (err.code === 'ENOENT') {
-                return callback(null, [])
+                return  []
             }
-            return callback(err);
+            return err;
         }
-        callback(null, JSON.parse(data));
+        console.log( JSON.parse(data))
+        return  JSON.parse(data);
     });
 };
 
-const getTaskById = (id, callback) => {
-    loadData((err, data) => {
-        if (err) {
+const getTaskById = async (id) => {
+    const task = await loadData()
+    console.log("🚀 ~ returnnewPromise ~ task:", task)
+    // return new Promise((res,rej)=>{
 
-        }
-        const taskIndex = data.findIndex(task => task.id == id)
-        if (taskIndex == -1) {
-            callback(null, "Task not Found")
-        }
-        callback(null, data[taskIndex])
-    })
+
+        // loadData((err, data) => {
+        //     if (err) {
+    
+        //     }
+        //     const taskIndex = data.findIndex(task => task.id == id)
+        //     if (taskIndex == -1) {
+        //         return ("Task not Found")
+        //     }
+        //     console.log("🚀 ~ loadData ~ data[taskIndex]:", data[taskIndex])
+        //     return (data[taskIndex]);
+        // })
+    // })
 }
 
-const updateTask = (id, updatedTask, callback) => {
+const updateTask = (id, updatedTask) => {
     const { title, description, completed, priority } = updatedTask;
 
     loadData((err, data) => {
@@ -47,7 +55,7 @@ const updateTask = (id, updatedTask, callback) => {
         }
         const taskIndex = data.findIndex(task => task.id == id)
         if (taskIndex == -1) {
-            // callback(null, "Task not Found")
+            return ("not found")
         }
         
         data[taskIndex].title = title;
@@ -55,18 +63,37 @@ const updateTask = (id, updatedTask, callback) => {
         data[taskIndex].completed = completed;
         //data.priority = priority;
         saveData(data, (err) => {
-            console.log("🚀 ~ saveData ~ data:", data)
             if (err) {
-                return callback(err);
+                return err;
             }
-            return callback(null, data[taskIndex]);
+            return  data[taskIndex];
         });
-
-        // console.log("🚀 ~ loadData ~ data:", data)
-        // callback(null, data)
     })
 
 }
 
+const deleteTask = (Id) => {
+    
+        
+        loadData((err,data)=>{
+            if (err) {
+    
+            }
+            const taskIndex = data.findIndex(task => task.id == Id)
+            if (taskIndex == -1) {
+                return  taskIndex
+            }
+            data.splice(taskIndex,1)
+            saveData(data, (err) => {
+                if (err) {
+                    return err;
+                }
+                return  taskIndex;
+            });
+        })
 
-module.exports = { saveData, loadData, getTaskById, updateTask }
+
+}
+
+
+module.exports = { saveData, loadData, getTaskById, updateTask,deleteTask }
