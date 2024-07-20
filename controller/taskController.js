@@ -5,12 +5,6 @@ const taskController = {
     addTask: async (req, res) => {
         const taskData = req.body;
 
-        // Validate the incoming task data
-        const validationError = taskService.validateTask(taskData);
-        if (validationError) {
-            return res.status(400).json({ error: validationError });
-        }
-
         try {
             // Add the task using the service
             const newTask = await taskService.addTask(taskData);
@@ -83,6 +77,24 @@ const taskController = {
         } catch (error) {
             console.error('Error deleting task:', error);
             return res.status(500).json({ error: 'An error occurred while deleting the task. Please try again later.' });
+        }
+    },
+
+    getTasksByPriority:async (req,res) => {
+        priorityLevel = req.params
+        validLevel = ["low","medium","heigh"]
+        if(!validLevel.includes(priorityLevel.level)){
+            res.status(400).json({error:`Invalid priority level. Must be one of ${validLevel.join(', ')}.` })
+        }
+        try {
+            const result = await taskService.getTasksByPriority(priorityLevel.level)
+            console.log("🚀 ~ getTasksByPriority: ~ result:", result)
+            res.status(200).json({message:`Task with Priority level ${priorityLevel.level}`, result})
+            
+        } catch (error) {
+            console.log("🚀 ~ getTasksByPriority: ~ error:", error)
+            res.status(500).json({ error: 'An error occurred while retrieving tasks by priority.',error });
+
         }
     }
 }

@@ -96,5 +96,12 @@ const deleteTask = async (id) => {
     return deletedTask;
 };
 
+const getTasksByPriority = async (level) =>{
+    const {tasks} = await loadData()
+    console.log("🚀 ~ getTasksByPriority ~ tasks:", tasks)
+    const d= tasks.filter((task)=> task.priority == level)
+    console.log("🚀 ~ getTasksByPriority ~ d:", d)
+    return d
+}
 
-module.exports = { validateTask, addTask, loadData, getTaskById, updateTask, deleteTask }
+module.exports = { validateTask, addTask, loadData, getTaskById, updateTask, deleteTask,getTasksByPriority }
