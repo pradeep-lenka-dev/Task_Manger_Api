@@ -1,17 +1,32 @@
 const express = require("express");
-var http = require('http');
 const bodyParser = require("body-parser");
-var Router = require ('./routes/taskRoute');
+const taskRoutes = require('./routes/taskRoute');
 
-const app = express()
-app.use(bodyParser.json())
-app.use('/',Router)
-
-
+const app = express();
 const PORT = 8080;
 
-const server = http.createServer(app);
-app.listen(PORT,()=>{
-  console.log("your  server start on Port-No :",PORT)
-})
+// Middleware
+app.use(bodyParser.json());
 
+// Routes
+app.use('/tasks', taskRoutes);
+
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).json({ error: err.message });
+});
+
+// Middleware for handling undefined routes
+app.use((req, res) => {
+    res.status(404).json({ error: 'Not Found' });
+});
+
+// Start the server
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`Server is running on port ${PORT}`);
+    });
+}
+
+module.exports = app;

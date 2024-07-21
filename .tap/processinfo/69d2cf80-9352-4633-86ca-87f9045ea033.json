@@ -1,5 +1,5 @@
 {
-  "date": "2024-07-20T14:41:19.003Z",
+  "date": "2024-07-21T06:50:27.375Z",
   "argv": [
     "/usr/bin/node",
     "/home/hp/Projects/Task_Manger_Api/test/server.test.js"
@@ -12,31 +12,31 @@
   ],
   "NODE_OPTIONS": "\"--import=file:///home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/processinfo/dist/esm/import.mjs\"",
   "cwd": "/home/hp/Projects/Task_Manger_Api",
-  "pid": 81325,
-  "ppid": 81297,
+  "pid": 34039,
+  "ppid": 34023,
   "parent": null,
-  "uuid": "4a12af92-c0de-4425-9002-d51a84d37c16",
+  "uuid": "69d2cf80-9352-4633-86ca-87f9045ea033",
   "files": [
     "/home/hp/Projects/Task_Manger_Api/test/server.test.js",
-    "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/dist/mjs/index.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/index.js",
-    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-json.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/dist/mjs/index.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/find-star-match.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-json.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/index.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/glob.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/has-magic.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/ignore.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/brace-expansion/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/pattern.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/dist/esm/index.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/walker.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/assert-valid-pattern.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/ast.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/escape.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/unescape.js",
-    "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/dist/esm/index.js",
-    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/pattern.js",
-    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/walker.js",
-    "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/dist/esm/index.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/minipass/dist/esm/index.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/processor.js",
+    "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/dist/esm/index.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/brace-expressions.js",
     "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/loader.mjs",
     "/home/hp/Projects/Task_Manger_Api/node_modules/@tapjs/mock/dist/esm/hooks.mjs",
@@ -76,20 +76,21 @@
     "/home/hp/Projects/Task_Manger_Api/app.js",
     "/home/hp/Projects/Task_Manger_Api/routes/taskRoute.js",
     "/home/hp/Projects/Task_Manger_Api/controller/taskController.js",
-    "/home/hp/Projects/Task_Manger_Api/services/taskService.js"
+    "/home/hp/Projects/Task_Manger_Api/services/taskService.js",
+    "/home/hp/Projects/Task_Manger_Api/middleware/validateTask.js"
   ],
   "sources": {
-    "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/dist/mjs/index.js": [
-      "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/src/index.ts"
-    ],
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/index.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/index.ts"
     ],
-    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-json.js": [
-      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/read-json.ts"
+    "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/dist/mjs/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/walk-up-path/src/index.ts"
     ],
     "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/find-star-match.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/find-star-match.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/dist/esm/read-json.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/read-json.ts"
     ],
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/index.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/index.ts"
@@ -103,6 +104,15 @@
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/ignore.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/ignore.ts"
     ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/pattern.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/pattern.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/src/index.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/walker.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/walker.ts"
+    ],
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/assert-valid-pattern.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/assert-valid-pattern.ts"
     ],
@@ -115,23 +125,14 @@
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/unescape.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/unescape.ts"
     ],
-    "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/dist/esm/index.js": [
-      "/home/hp/Projects/Task_Manger_Api/node_modules/path-scurry/src/index.ts"
-    ],
-    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/pattern.js": [
-      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/pattern.ts"
-    ],
-    "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/walker.js": [
-      "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/walker.ts"
-    ],
-    "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/dist/esm/index.js": [
-      "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/src/index.ts"
-    ],
     "/home/hp/Projects/Task_Manger_Api/node_modules/minipass/dist/esm/index.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/minipass/src/index.ts"
     ],
     "/home/hp/Projects/Task_Manger_Api/node_modules/glob/dist/esm/processor.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/glob/src/processor.ts"
+    ],
+    "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/dist/esm/index.js": [
+      "/home/hp/Projects/Task_Manger_Api/node_modules/lru-cache/src/index.ts"
     ],
     "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/dist/esm/brace-expressions.js": [
       "/home/hp/Projects/Task_Manger_Api/node_modules/minimatch/src/brace-expressions.ts"
@@ -233,9 +234,9 @@
       "/home/hp/Projects/Task_Manger_Api/node_modules/resolve-import/src/resolve-package-import.ts"
     ]
   },
-  "root": "4a12af92-c0de-4425-9002-d51a84d37c16",
+  "root": "69d2cf80-9352-4633-86ca-87f9045ea033",
   "externalID": "test/server.test.js",
   "code": 0,
   "signal": null,
-  "runtime": 1538.260981
+  "runtime": 1684.72694
 }

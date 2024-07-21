@@ -9,15 +9,17 @@ const validateTasks = require("../middleware/validateTask")
 
 router.get('/tasks/priority/:level',taskController.getTasksByPriority)
 
-router.route('/tasks')
+router.route('/')
         .get(taskController.getTask)
         .post(validateTasks,taskController.addTask)
 
-router.route('/tasks/:id')
+router.route('/:id')
         .get(taskController.getTaskById)
         .put(validateTasks,taskController.updateTask)
         .delete(taskController.deleteTask)
         
 
+
+        
 
 module.exports = router

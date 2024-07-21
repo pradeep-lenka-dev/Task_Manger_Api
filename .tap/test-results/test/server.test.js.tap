@@ -1,433 +1,61 @@
 TAP version 14
 # Subtest: POST /tasks
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as post] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:12:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 1 - POST /tasks # time=111.199ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 6
-    columnNumber: 5
-    typeName: Object
-  source: |
-    const server = supertest(app);
-  
-    tap.test("POST /tasks", async (t) => {
-    ----^
-      const newTask = {
-        title: "New Task",
-  ...
+ok 1 - POST /tasks # time=155.665ms
 
 # Subtest: POST /tasks with invalid data
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as post] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:21:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 2 - POST /tasks with invalid data # time=9.678ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 17
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("POST /tasks with invalid data", async (t) => {
-    ----^
-      const newTask = {
-        title: "New Task",
-  ...
+ok 2 - POST /tasks with invalid data # time=15.554ms
 
 # Subtest: GET /tasks
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as get] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:27:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
-    1..1
-not ok 3 - GET /tasks # time=14.991ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 26
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("GET /tasks", async (t) => {
-    ----^
-      const response = await server.get("/tasks");
-      t.equal(response.status, 200);
-  ...
+    ok 1 - should be equal
+    ok 2 - specified property should be defined own property
+    ok 3 - specified property should be defined own property
+    ok 4 - specified property should be defined own property
+    ok 5 - specified property should be defined own property
+    ok 6 - type is number
+    ok 7 - type is string
+    ok 8 - type is string
+    ok 9 - type is boolean
+    1..9
+ok 3 - GET /tasks # time=21.246ms
 
 # Subtest: GET /tasks/:id
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as get] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:41:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
-    1..1
-not ok 4 - GET /tasks/:id # time=14.293ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 40
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("GET /tasks/:id", async (t) => {
-    ----^
-      const response = await server.get("/tasks/1");
-      t.equal(response.status, 200);
-  ...
+    ok 1 - should be equal
+    ok 2 - should match pattern
+    1..2
+ok 4 - GET /tasks/:id # time=20.532ms
 
 # Subtest: GET /tasks/:id with invalid id
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as get] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:54:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 5 - GET /tasks/:id with invalid id # time=20.302ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 53
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("GET /tasks/:id with invalid id", async (t) => {
-    ----^
-      const response = await server.get("/tasks/999");
-      t.equal(response.status, 404);
-  ...
+ok 5 - GET /tasks/:id with invalid id # time=23.598ms
 
 # Subtest: PUT /tasks/:id
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as put] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:65:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 6 - PUT /tasks/:id # time=9.375ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 59
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("PUT /tasks/:id", async (t) => {
-    ----^
-      const updatedTask = {
-        title: "Updated Task",
-  ...
+ok 6 - PUT /tasks/:id # time=21.579ms
 
 # Subtest: PUT /tasks/:id with invalid id
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as put] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:76:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 7 - PUT /tasks/:id with invalid id # time=15.582ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 70
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("PUT /tasks/:id with invalid id", async (t) => {
-    ----^
-      const updatedTask = {
-        title: "Updated Task",
-  ...
+ok 7 - PUT /tasks/:id with invalid id # time=19.436ms
 
 # Subtest: PUT /tasks/:id with invalid data
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> [as put] (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:87:33)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 8 - PUT /tasks/:id with invalid data # time=21.05ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 81
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("PUT /tasks/:id with invalid data", async (t) => {
-    ----^
-      const updatedTask = {
-        title: "Updated Task",
-  ...
+ok 8 - PUT /tasks/:id with invalid data # time=10.142ms
 
 # Subtest: DELETE /tasks/:id
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:93:39)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 9 - DELETE /tasks/:id # time=11.422ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 92
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("DELETE /tasks/:id", async (t) => {
-    ----^
-      const response = await server.delete("/tasks/1");
-      t.equal(response.status, 200);
-  ...
+ok 9 - DELETE /tasks/:id # time=18.918ms
 
 # Subtest: DELETE /tasks/:id with invalid id
-    not ok 1 - app.address is not a function
-      ---
-      stack: |
-        Test.serverAddress (node_modules/supertest/lib/test.js:46:22)
-        new Test (node_modules/supertest/lib/test.js:34:14)
-        Object.obj.<computed> (node_modules/supertest/index.js:43:18)
-        Test.<anonymous> (test/server.test.js:99:39)
-      at:
-        fileName: node_modules/supertest/lib/test.js
-        lineNumber: 46
-        columnNumber: 22
-        typeName: Test
-        methodName: serverAddress
-        functionName: Test.serverAddress
-      type: TypeError
-      tapCaught: returnedPromiseRejection
-      source: |2
-           */
-          serverAddress(app, path) {
-            const addr = app.address();
-        ---------------------^
-      
-            if (!addr) this._server = app.listen(0);
-      ...
-    
+    ok 1 - should be equal
     1..1
-not ok 10 - DELETE /tasks/:id with invalid id # time=18.588ms
-  ---
-  at:
-    fileName: test/server.test.js
-    lineNumber: 98
-    columnNumber: 5
-    typeName: Object
-  source: |
-    });
-  
-    tap.test("DELETE /tasks/:id with invalid id", async (t) => {
-    ----^
-      const response = await server.delete("/tasks/999");
-      t.equal(response.status, 404);
-  ...
+ok 10 - DELETE /tasks/:id with invalid id # time=17.138ms
 
-your  server start on Port-No : [33m8080[39m
 1..10

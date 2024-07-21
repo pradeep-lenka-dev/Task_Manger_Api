@@ -18,10 +18,13 @@ const taskController = {
     getTask : async (req, res) => {
         try {
             const tasks = await taskService.loadData();
-            res.status(200).json({ message: 'Tasks fetched successfully', tasks });
+            res.status(200).json(tasks.tasks);
+            // res.status(200).json({ message: 'Tasks fetched successfully', tasks });
         } catch (error) {
             console.error('Error fetching tasks:', error);
-            res.status(500).json({ error: 'An error occurred while fetching tasks. Please try again later.' });
+            res.status(404).json({ error: 'Failed to load tasks' });
+
+            // res.status(500).json({ error: 'An error occurred while fetching tasks. Please try again later.' });
         }
     },
 
@@ -29,13 +32,18 @@ const taskController = {
         const id = req.params.id;
         try {
             const result = await taskService.getTaskById(id);
+            // if (!result) {
+            //     return res.status(404).json({ message: 'Task not found' });
+            // }
             if (!result) {
-                return res.status(404).json({ message: 'Task not found' });
+                return res.status(404).json({ error: 'Task not found' });
             }
-            return res.status(200).json({ message: 'Task retrieved successfully', task: result });
+            res.status(200).json(result);
+
+            // return res.status(200).json({ message: 'Task retrieved successfully', task: result });
         } catch (error) {
             console.error('Error retrieving task:', error);
-            return res.status(500).json({ error: 'An error occurred while retrieving the task. Please try again later.' });
+            return res.status(404).json({ error: 'An error occurred while retrieving the task. Please try again later.' });
         }
     },
 
@@ -56,7 +64,7 @@ const taskController = {
             return res.status(200).json({ message: 'Task updated successfully', task: result });
         } catch (error) {
             console.error('Error updating task:', error);
-            return res.status(500).json({ error: 'An error occurred while updating the task. Please try again later.' });
+            return res.status(404).json({ error: 'An error occurred while updating the task. Please try again later.' });
         }
     },
 
@@ -76,7 +84,7 @@ const taskController = {
             return res.status(200).json({ message: 'Task deleted successfully' });
         } catch (error) {
             console.error('Error deleting task:', error);
-            return res.status(500).json({ error: 'An error occurred while deleting the task. Please try again later.' });
+            return res.status(404).json({ error: 'An error occurred while deleting the task. Please try again later.' });
         }
     },
 
